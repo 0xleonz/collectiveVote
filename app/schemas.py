@@ -18,3 +18,13 @@ class ElectionOut(BaseModel):
 
     class Config:
         orm_mode = True
+
+class TokenBatchRequest(BaseModel):
+    election_id: int
+    count: int
+
+class VoterTokenOut(BaseModel):
+    token: str
+
+    class Config:
+        orm_mode = True

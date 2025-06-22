@@ -4,7 +4,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from app.main import app
-from app.database import Base, get_db
+from app.database import Base, engine, SessionLocal
+from app.routes.vote import get_db
 
 # 1) Creamos un engine SQLite en memoria.
 SQLALCHEMY_DATABASE_URL = "sqlite:///:memory:"

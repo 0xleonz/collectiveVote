@@ -4,3 +4,5 @@ notas.md
 collectivevote.db
 **/**doc.md
 uv.lock
+build
+collectivevote.egg-info

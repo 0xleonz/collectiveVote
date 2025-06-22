@@ -1,8 +1,10 @@
+
 [project]
 name = "collectivevote"
 version = "0.1.0"
 description = "Sistema de votación segura y anónima para organizaciones sindicales"
 authors = [{name = "Leonz"}]
+requires-python = ">=3.8"
 dependencies = [
   "fastapi",
   "uvicorn",
@@ -13,9 +15,12 @@ dependencies = [
   "cryptography"
 ]
 
-[build-system]
-requires = ["uv"]
-build-backend = "uv"
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-cov",
+  "black",
+  "isort",
+  "flake8"
+]
 
-[tool.pytest.ini_options]
-pythonpath = ["."]

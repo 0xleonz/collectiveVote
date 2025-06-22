@@ -1,3 +1,4 @@
 .env
 **/**__pycache**
 notas.md
+collectivevote.db

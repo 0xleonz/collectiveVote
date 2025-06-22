@@ -17,3 +17,5 @@ dependencies = [
 requires = ["uv"]
 build-backend = "uv"
 
+[tool.pytest.ini_options]
+pythonpath = ["."]

@@ -8,6 +8,7 @@ class ElectionCreate(BaseModel):
     start_time: Optional[datetime] = None
     end_time: datetime
 
+# temporal
 class ElectionOut(BaseModel):
     id: int
     title: str

@@ -31,7 +31,6 @@ def create_election(election: schemas.ElectionCreate, db: Session = Depends(get_
     db.refresh(new_election)
     return new_election
 
-
 @router.post("/generate-tokens", response_model=List[schemas.VoterTokenOut])
 def generate_tokens(
     request: schemas.TokenBatchRequest, db: Session = Depends(get_db)

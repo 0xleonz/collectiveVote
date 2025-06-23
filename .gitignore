@@ -6,3 +6,6 @@ collectivevote.db
 uv.lock
 build
 collectivevote.egg-info
+# Cobertura
+.coverage
+htmlcov/

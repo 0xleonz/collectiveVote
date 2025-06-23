@@ -3,10 +3,11 @@
 from fastapi import FastAPI
 from app.routes import vote
 from app.database import init_db
-
-app = FastAPI(title="CollectiveVote - Test (mvp xd)")
+from app.routes import auth
+app = FastAPI(title="CollectiveVote - Test (mvp x)")
 
 app.include_router(vote.router, prefix="/vote", tags=["Votación"])
+app.include_router(auth.router)
 
 @app.on_event("startup")
 def startup_event():

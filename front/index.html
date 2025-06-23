@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CollectiveVote Frontend</title>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    form { max-width: 300px; margin: auto; display: flex; flex-direction: column; gap: 0.5rem; }
+    label { font-weight: bold; }
+    input { padding: 0.5rem; }
+    button { padding: 0.5rem 1rem; }
+    #message { margin-top: 1rem; color: red; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Iniciar sesión - CollectiveVote</h1>
+  </header>
+
+  <main>
+    <form id="loginForm">
+      <label for="username">Usuario</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit">Login</button>
+    </form>
+    <div id="message"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 CollectiveVote</p>
+  </footer>
+
+  <script>
+    const loginUrl = 'http://localhost:8000/auth/login';
+
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+      try {
+        const res = await fetch(loginUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
+          body: JSON.stringify({ username: user, password: pass })
+        });
+        if (res.ok) {
+          document.getElementById('message').textContent = '¡Login exitoso!';
+          document.getElementById('message').style.color = 'green';
+        } else {
+          const error = await res.json();
+          throw new Error(error.detail || res.statusText);
+        }
+      } catch (err) {
+        document.getElementById('message').textContent = 'Error: ' + err.message;
+      }
+    });
+  </script>
+</body>
+</html>

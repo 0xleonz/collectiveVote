@@ -10,3 +10,72 @@ collectivevote.egg-info
 .coverage
 htmlcov/
 do
+# Node dependencies
+/node_modules/
+
+# Next.js build output
+/.next/
+/out/
+
+# Production environment variables
+.env.local
+.env.production.local
+.env.test.local
+.env.development.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# MacOS
+.DS_Store
+
+# Linux
+Thumbs.db
+
+# Static files cache
+/.cache/
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Local build scripts
+/scripts
+
+# Local environment overrides
+.env.*.local
+
+# Test coverage
+/coverage/
+
+# Debug
+debug.log*
+
+# Storybook build outputs
+/storybook-static/
+
+# Misc
+.DS_Store
+**/**.next
+**/**node_modules
+front/.next
+

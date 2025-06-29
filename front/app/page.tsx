@@ -29,8 +29,8 @@ export default function Home() {
       {/* <AboutSectionTwo /> */}
       {/* <Testimonials /> */}
       {/* <Pricing /> */}
-      <Blog />
-      <Contact />
+      {/* <Blog /> */}
+      {/* <Contact /> */}
     </>
   );
 }

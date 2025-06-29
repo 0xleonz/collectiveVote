@@ -54,7 +54,7 @@ graph TD
 * 🧱 **Diseño monolítico pero modular**
 
   * Backend: Python (FastAPI) con SQLite/PostgreSQL.
-  * Frontend: Svelte (ligero, rápido y accesible).
+  * Frontend: React (ligero, rápido y accesible).
   * Fácil de auto-hostear (Docker support incluido).
 
 * 🐧 **100% Software Libre**
@@ -68,7 +68,7 @@ graph TD
 | Componente    | Tecnología           |
 | ------------- | -------------------- |
 | Backend       | Python + FastAPI     |
-| Frontend      | Svelte               |
+| Frontend      | React               |
 | Base de datos | PostgreSQL / SQLite  |
 | Cifrado       | RSA / AES-256        |
 | Deploy        | Docker               |

@@ -7,6 +7,7 @@
 
 **CollectiveVote** es una plataforma de votación en línea pensada para sindicatos, cooperativas y organizaciones que requieren procesos democráticos protegidos. Está diseñada para resistir vigilancia, garantizar el anonimato y prevenir fraudes, sin depender de proveedores externos ni tecnologías invasivas.
 
+<img src="assets/mainpage.png" width="700"/>
 ---
 
 ## 🧩 Arquitectura del Sistema

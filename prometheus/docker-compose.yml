@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      # opcional: habilita reload en runtime
+      - "--web.enable-lifecycle"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+      - "9090:9090"
+
+  node-exporter:
+    image: prom/node-exporter:latest
+    command:
+      - --path.rootfs=/host
+    volumes:
+      - /:/host:ro,rslave
+    ports:
+      - "9100:9100"
+
+  grafana:
+    image: grafana/grafana-oss:latest
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=secret
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+

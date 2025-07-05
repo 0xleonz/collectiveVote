@@ -14,8 +14,8 @@
 
 ```mermaid
 graph TD
-    B --> D[Servidor de Votación]
-    C -->|Token temporal cifrado| D
+    B[Users] --> D[Servidor de Votación]
+    C[tester] -->|Token temporal cifrado| D
     D -->|Hash de voto| E[Base de Datos Inmutable]
     E --> F[Verificador/Auditoría]
     G[CLI Admin] --> D

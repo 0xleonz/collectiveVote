@@ -14,8 +14,6 @@
 
 ```mermaid
 graph TD
-    A[Usuario Sindicalizado] --> B[Frontend Web Seguro]
-    B --> C[Servidor de Autenticación]
     B --> D[Servidor de Votación]
     C -->|Token temporal cifrado| D
     D -->|Hash de voto| E[Base de Datos Inmutable]

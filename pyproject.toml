@@ -1,6 +1,6 @@
 [project]
 name = "collectivevote"
-version = "0.1.0"
+version = "0.0.1"
 description = "Sistema de votación segura y anónima para organizaciones sindicales"
 authors = [{name = "Leonz"}]
 requires-python = ">=3.8"
